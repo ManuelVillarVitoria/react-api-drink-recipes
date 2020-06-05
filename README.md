@@ -2,7 +2,7 @@
 
 _The project consists of doing the following:_
 
-_1.-Creating the form._
+_1.-Creating and validating the form, displaying an error message if we don't select the categhory._
 
 _2.-Creating a Context with Context API, consulting the API, displaying the options in the form and reading what the user select._
 

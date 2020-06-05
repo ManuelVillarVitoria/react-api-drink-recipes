@@ -5,7 +5,7 @@ import ListaRecetas from './components/ListaRecetas';
 
 import CategoriasProvider from './context/CategoriasContext';
 import RecetasProvider from './context/RecetasContext';
-import ModalProvider, { ModalContext } from './context/ModalContext';
+import ModalProvider from './context/ModalContext';
 
 
 function App() {
@@ -21,7 +21,7 @@ function App() {
             </div>
               <ListaRecetas />
           </div>
-
+         
         </ModalProvider>
       </RecetasProvider>
     </CategoriasProvider>

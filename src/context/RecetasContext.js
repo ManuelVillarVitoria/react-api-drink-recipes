@@ -29,7 +29,7 @@ const RecetasProvider = (props) => {
             }
             obtenerRecetas();
         }
-
+    // eslint-disable-next-line
     }, [busqueda]);
 
 

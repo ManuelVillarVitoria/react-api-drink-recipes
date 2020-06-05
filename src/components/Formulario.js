@@ -8,6 +8,8 @@ const Formulario = () => {
         nombre: '',
         categoria: ''
     });
+    const [error, guardarError] = useState(false);
+    const {categoria} = busqueda;
 
     const { categorias } = useContext(CategoriasContext);
     const { buscarRecetas, guardarConsultar } = useContext(RecetasContext );
@@ -20,17 +22,32 @@ const Formulario = () => {
         })
     }
 
+     //consultar las API
+     const buscarInformacion = e => {
+        e.preventDefault();
+
+        if(categoria.trim() === "")  {
+            guardarError(true);
+            return;
+        }
+        guardarError(false);
+        //Todo bien, pasar al componente principal
+        buscarRecetas(busqueda);
+        guardarConsultar(true);
+    }
+
     return ( 
+        
+
         <form
             className="col-12"
-            onSubmit={ e => {
-                e.preventDefault();
-                buscarRecetas(busqueda);
-                guardarConsultar(true);
-            }}
+            onSubmit={buscarInformacion}
         >
+
+        {error ? <p className="alert alert-warning text-center p-2">Es obligatorio seleccionar la categoría</p> : null}
+
             <fieldset className="text-center">
-                <legend>Busca bebidas por Categoría o Ingrediente</legend>
+                <legend>Busca bebidas por Categoría o Categoría e Ingrediente</legend>
             </fieldset>
 
             <div className="row mt-4">
@@ -68,6 +85,7 @@ const Formulario = () => {
                 </div>
             </div>
         </form>
+      
      );
 }
  
