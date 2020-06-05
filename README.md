@@ -17,7 +17,7 @@ _6.-Adding ingredients and amounts to the recipes._
 _- Have been used **Functional Components**, **Hooks useState, useEffect & useContext(Context API)**, **Material-UI     components** and  **Axios + Async/Await** in this project._
 
 
-* ### `Deployment:` 
+* ### `Deployment:` **https://youthful-wiles-3486c9.netlify.app/**
 
 
 ## Settings 🔧
